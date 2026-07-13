@@ -1,0 +1,151 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.title-light {
+    color: var(--color-title);
+}
+
+.section {
+    margin-bottom: 90px;
+}
+
+.link {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+.text-dark {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.logo {
+    height: 42px;
+    width: 74px;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    height: 106px;
+
+    @media screen and (min-width: $bp-desktop) {
+        backdrop-filter: blur(10px);
+    }
+    
+    &__container {
+        display: flex;
+        gap: 40px;
+        margin: 32px auto;
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        display: none;
+
+        @media screen and (min-width: $bp-desktop) {
+            display: flex;
+            gap: 56px;
+            flex: 1;
+            justify-content: center;
+            color: var(--color-primary-dark);
+        }
+    }
+
+    &__address {
+        display: none;
+
+        @media screen and (min-width: $bp-desktop) {
+
+            display: flex;
+            gap: 32px;
+        }
+    }
+
+    &__burger {
+        fill: var(--color-primary-light);
+        background: transparent;
+        padding-top: 0;
+
+        @media screen and (min-width: $bp-desktop) {
+            display: none;
+        }
+    }
+
+    &__address-icon {
+        fill: var(--color-primary-dark);
+    }
+}
+
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+
+    &__btn-close {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+}
+
+.mobile__logo {
+    position: absolute;
+    width: 57px;
+    height: 30px;
+    top: 16px;
+    left: 20px;
+}
+
+.mobile-menu__list {
+    position: absolute;
+    top: 78px;
+    left: 20px;
+}
+
+.mobile-link {
+    margin-bottom: 30px;
+}
+
+.mobile__address {
+    display: flex;
+    gap: 16px;
+}
+
+.mobile__address {
+    position: absolute;
+    top: 260px;
+    left: 20px;
+}

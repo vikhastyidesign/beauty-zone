@@ -1,0 +1,149 @@
+.procedure-section {
+    background: transparent;
+
+    &__title {
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (min-width: $bp-desktop) {
+            max-width: 510px;
+        }
+    }
+}
+
+.procedure-slider {
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.procedure-menu {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.carousel-btn,
+.carousel-btn.next {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        min-width: 44px;
+        max-width: 44px;
+        height: 44px;
+        min-height: 44px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid var(--color-primary-dark);
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+}
+
+.carousel-btn:hover,
+.carousel-btn.next:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.carousel-arrow {
+    fill: var(--color-primary-dark);
+}
+
+.carousel-btn.next, 
+.swiper-button-next {
+    transform: rotate(180deg);
+    top: 350px;
+    right: 42px;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.procedure-card {
+    position: relative;
+    width: 344px;
+    height: 456px;
+    overflow: hidden;
+    background: linear-gradient(180.05deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.725825) 84.61%,
+    #011C44 101.39%);
+    border-top-left-radius: 120px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 120px;
+    border-bottom-left-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 1;
+}
+
+.procedure-card-image {
+    position: absolute;
+    z-index: -1;
+}
+
+.procedure-card-title {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-primary-light);
+}
+
+.procedure-container {
+    position: relative;
+}
+
+.carousel-btn.swiper-button-prev {
+    left: -20px;
+    top: 350px;
+}
+
+.swiper-pagination {
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    opacity: 1;
+    color: var( --color-black-second);
+}
+
+.swiper-pagination-active {
+    background-color: #2B7FFF;
+}
+
+.swiper-pagination {
+    margin-top: 24px;
+    position: relative;
+}
+
+.procedure-list {
+    padding-bottom: 20px;
+}

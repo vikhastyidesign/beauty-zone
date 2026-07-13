@@ -1,0 +1,74 @@
+.advantages-section {
+    position: relative;
+    overflow: visible;
+
+    &__title {
+        width: 100%;
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;    
+
+        @media screen and (min-width: $bp-tablet) {
+            max-width: 432px;
+        }
+    }
+
+    &__card {
+        display: block;
+        text-align: center;
+        width: 316px;
+        height: 180px;
+        border-radius: 32px;
+        background-color: var(--color-second-light);
+        box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.38);
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__card:hover {
+        transform: scale(1.01);
+    }
+}
+
+.advantages-list {
+    display: block;
+
+    @media screen and (min-width: $bp-desktop) {
+        display: flex;
+        justify-content: center;
+        gap: 56px;
+    }
+}
+
+.card-icon {
+    margin-top: 24px;
+    fill: var(--color-title);
+}
+
+.card-text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0%;
+    color: var(--color-black);
+    margin-top: 18px;
+}
+
+.advantages-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.advantages-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    z-index: -1;
+    max-height: 900px;
+    height: auto;
+}
